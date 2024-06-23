@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Nepal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            background: #444;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        article {
+            display: none;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        .active {
+            display: block;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        aside {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Nepal</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home" onclick="showSection('home')">Home</a></li>
+        <li><a href="#culture" onclick="showSection('culture')">Culture</a></li>
+        <li><a href="#nature" onclick="showSection('nature')">Nature</a></li>
+        <li><a href="#history" onclick="showSection('history')">History</a></li>
+        <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <article id="home" class="active">
+        <h2>About Nepal</h2>
+        <p>Nepal, officially the Federal Democratic Republic of Nepal, is a landlocked country in South Asia. It is mainly located in the Himalayas, but also includes parts of the Indo-Gangetic Plain, bordering China in the north and India in the south, east, and west. It is the 49th largest country by population and 93rd largest country by area.</p>
+        <p>Nepal has a diverse geography, including fertile plains, subalpine forested hills, and eight of the world's ten tallest mountains, including Mount Everest, the highest point on Earth. Kathmandu is the nation's capital and the largest city. Nepal is a multiethnic country with Nepali as the official language.</p>
+    </article>
+
+    <article id="culture">
+        <h2>Culture</h2>
+        <p>Nepal is rich in cultural heritage. The country has numerous temples, monasteries, and historical sites that reflect its deep religious roots. Festivals like Dashain, Tihar, and Holi are celebrated with great enthusiasm. The traditional music and dance forms, such as the classical Newari dance and the folk songs of the various ethnic groups, add to the country's cultural vibrancy.</p>
+    </article>
+
+    <article id="nature">
+        <h2>Nature</h2>
+        <p>Nepal is renowned for its stunning natural beauty. The Himalayas dominate the northern part of the country, offering spectacular views and trekking opportunities. National parks and wildlife reserves like Chitwan National Park and Bardia National Park are home to diverse flora and fauna, including rare species like the Bengal tiger and the one-horned rhinoceros.</p>
+    </article>
+
+    <article id="history">
+        <h2>History</h2>
+        <p>Nepal has a long and storied history that dates back to ancient times. It is the birthplace of Lord Buddha, with Lumbini being a significant pilgrimage site. The country's history includes the unification by King Prithvi Narayan Shah, the reign of the Malla kings, and the establishment of democracy in the 20th century. The rich historical tapestry is evident in the architecture and monuments scattered across the nation.</p>
+    </article>
+
+    <article id="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions or would like more information about Nepal, please feel free to reach out to us.</p>
+        <p>Email: info@nepal.com</p>
+        <p>Phone: +977-1-1234567</p>
+    </article>
+</div>
+
+<footer>
+    <p>&copy; 2024 About Nepal. All rights reserved.</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        var articles = document.querySelectorAll('article');
+        articles.forEach(function(article) {
+            article.classList.remove('active');
+        });
+        var activeArticle = document.getElementById(sectionId);
+        activeArticle.classList.add('active');
+    }
+
+    // Show the home section by default on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        showSection('home');
+    });
+</script>
+
+</body>
+</html>
